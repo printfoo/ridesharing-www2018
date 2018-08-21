@@ -36,22 +36,23 @@ def get_geo_id(line, block):
 if __name__ == "__main__":
 
     # Get file path.
-    year = 2015
     sys_path = sys.path[0]
     sep = sys_path.find("/src")
     file_path = sys_path[0:sep]
-    block_path = file_path + "/resources/sf_block_groups/sf_bg_with_data_acs15.geojson"
-    user_path = file_path + "/resources/sf_data/sf_user_info.csv"
-    mapping_path = file_path + "/resources/sf_data/sf_mapping_user.csv"
+    city = sys.argv[1].lower()
+    block_path = file_path + "/resources/" + city + "_block_groups/" + city + "_block_groups_2015.geojson"
+    user_path = file_path + "/resources/" + city + "_block_groups/" + city + "_user_info.txt"
+    mapping_path = file_path + "/resources/" + city + "_block_groups/" + city + "_user_mapping.csv"
 
     # Get block dictionary.
     block = get_block(block_path = block_path)
 
     # Read data.
-    user_df = pd.read_csv(user_path)
+    city_sep = {"nyc": ", ", "sf": ","}
+    user_df = pd.read_csv(user_path, sep = city_sep[city])
 
     # Map points inside.
     mapping_df = user_df.apply(lambda line: get_geo_id(line, block), axis = 1)
 
     # Save data.
-    mapping_df[["user_info","geo_id"]].to_csv(mapping_path)
+    mapping_df.to_csv(mapping_path, index = False)

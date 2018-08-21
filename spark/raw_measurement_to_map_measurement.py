@@ -6,9 +6,9 @@ import pydoop.hdfs as hdfs
 if __name__ == "__main__":
 
     # Get paths then delete old results and create new path.
-    uber_raw_measurement_path = "hdfs://megatron.ccs.neu.edu/user/jiangshan/ridesharing/proc/uber_sf_raw_measurement/*"
-    lyft_raw_measurement_path = "hdfs://megatron.ccs.neu.edu/user/jiangshan/ridesharing/proc/lyft_sf_raw_measurement/*"
-    map_measurement_path = "hdfs://megatron.ccs.neu.edu/user/jiangshan/ridesharing/clean/sf_map_measurement"
+    uber_raw_measurement_path = "hdfs://megatron.ccs.neu.edu/user/jiangshan/ridesharing/proc/uber_nyc_raw_measurement/*"
+    lyft_raw_measurement_path = "hdfs://megatron.ccs.neu.edu/user/jiangshan/ridesharing/proc/lyft_nyc_raw_measurement/*"
+    map_measurement_path = "hdfs://megatron.ccs.neu.edu/user/jiangshan/ridesharing/clean/nyc_map_measurement"
     try:
         hdfs.rmr(map_measurement_path)
     except:

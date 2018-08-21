@@ -18,6 +18,23 @@ def checktime_uber(row):
         return np.nan
     return row[row.index[1]]
 
+def checktime_period(t, period):
+    if period == "all":
+        return True if (t >= 1478937600 and t <= 1478937600 + 86400 * 40) else False
+    elif period == "peak":
+        for i in range(40):
+            if (t >= 1478937600 + 86400 * i + 7 * 3600 and t <= 1478937600 + 86400 * i + 23 * 3600):
+                return True
+        return False
+    elif period == "nadir":
+        for i in range(40):
+            if (t >= 1478937600 + 86400 * i + 7 * 3600 and t <= 1478937600 + 86400 * i + 22 * 3600):
+                return False
+        return True
+    else:
+        return False
+
+
 if __name__ == "__main__":
 
     # Get path.
@@ -25,16 +42,19 @@ if __name__ == "__main__":
     sep = sys_path.find("/src")
     file_path = sys_path[0:sep]
     city = sys.argv[1].lower()
+    period = sys.argv[2].lower()
     supply_path = file_path + "/resources/" + city + "_data/" + city + "_supply_5min.csv"
     demand_path = file_path + "/resources/" + city + "_data/" + city + "_demand_5min.csv"
     indicator_path = file_path + "/resources/" + city + "_data/" + city + "_indicator_5min.csv"
-    mapping_path = file_path + "/resources/" + city + "_data/" + city + "_mapping_user.csv"
-    all_path = file_path + "/resources/" + city + "_data/" + city + "_all_data.csv"
+    mapping_path = file_path + "/resources/" + city + "_block_groups/" + city + "_user_mapping.csv"
+    all_path = file_path + "/resources/" + city + "_data/" + city + "_" + period + "_data.csv"
 
     # Read data.
     supply_df = pd.read_csv(supply_path)
     demand_df = pd.read_csv(demand_path)
     indicator_df = pd.read_csv(indicator_path)
+    del indicator_df["lat"]
+    del indicator_df["lng"]
     mapping_df = pd.read_csv(mapping_path)
 
     # Join data.
@@ -42,22 +62,26 @@ if __name__ == "__main__":
         .merge(demand_df, on = ["timestamp", "geo_id"], how = "left") \
         .merge(mapping_df, on = ["geo_id"], how = "left") \
         .merge(indicator_df, on = ["timestamp", "user_info"], how = "left")
-    all_df = all_df[all_df["timestamp"] >= 1478937600]
-    all_df = all_df[all_df["timestamp"] <= 1478937600 + 86400 * 40]
-    all_df["taxi_sup_tmp"] = all_df["taxi_sup"] * 2026.0 / 554.0
-    all_df["taxi_dem_tmp"] = all_df["taxi_dem"] * 2026.0 / 554.0
-    all_df["taxi_sup"] = all_df[["timestamp", "taxi_sup_tmp"]].apply(checktime_taxi, axis = 1)
-    all_df["taxi_dem"] = all_df[["timestamp", "taxi_dem_tmp"]].apply(checktime_taxi, axis = 1)
-    all_df["uber_sup_tmp"] = all_df["uber_sup"]
-    all_df["uber_dem_tmp"] = all_df["uber_dem"]
-    all_df["uber_sup"] = all_df[["timestamp", "uber_sup_tmp"]].apply(checktime_uber, axis = 1)
-    all_df["uber_dem"] = all_df[["timestamp", "uber_dem_tmp"]].apply(checktime_uber, axis = 1)
+    if city == "sf":
+        all_df = all_df[all_df["timestamp"].apply(lambda t: checktime_period(t, period))]
+        all_df["taxi_sup_tmp"] = all_df["taxi_sup"] * 2026.0 / 554.0
+        all_df["taxi_dem_tmp"] = all_df["taxi_dem"] * 2026.0 / 554.0
+        all_df["taxi_sup"] = all_df[["timestamp", "taxi_sup_tmp"]].apply(checktime_taxi, axis = 1)
+        all_df["taxi_dem"] = all_df[["timestamp", "taxi_dem_tmp"]].apply(checktime_taxi, axis = 1)
+        all_df["uber_sup_tmp"] = all_df["uber_sup"]
+        all_df["uber_dem_tmp"] = all_df["uber_dem"]
+        all_df["uber_sup"] = all_df[["timestamp", "uber_sup_tmp"]].apply(checktime_uber, axis = 1)
+        all_df["uber_dem"] = all_df[["timestamp", "uber_dem_tmp"]].apply(checktime_uber, axis = 1)
+    else:
+        all_df = all_df[all_df["timestamp"] >= 1485850000]
+        all_df = all_df[all_df["timestamp"] <= 1486600000]
     all_df["uber_sur"] = (all_df["uber_sup"] - all_df["uber_dem"]) / (all_df["uber_dem"] + 1)
     all_df["lyft_sur"] = (all_df["lyft_sup"] - all_df["lyft_dem"]) / (all_df["lyft_dem"] + 1)
     all_df["taxi_sur"] = (all_df["taxi_sup"] - all_df["taxi_dem"]) / (all_df["taxi_dem"] + 1)
     all_df["taxi_pri"] = 1.0
     all_df["uber_pri"] = all_df["uber_surge"]
     all_df["lyft_pri"] = all_df["lyft_surge"]
+        
 
     # Save data.
     select = ["timestamp", "geo_id", "lat", "lng",

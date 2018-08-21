@@ -21,9 +21,10 @@ if __name__ == "__main__":
     sep = sys_path.find("/src")
     file_path = sys_path[0:sep]
     city = sys.argv[1].lower()
+    period = sys.argv[2].lower()
     map_path = file_path + "/resources/sf_block_groups/sf_bg_with_data_acs15.geojson"
-    all_data_path = file_path + "/resources/" + city + "_data/" + city + "_group_geo.csv"
-    results_path = file_path + "/results/" + city + "_city_corr.txt"
+    all_data_path = file_path + "/resources/" + city + "_data/" + city + "_" + period + "_group_geo.csv"
+    results_path = file_path + "/results/" + city + "_" + period + "_city_corr.txt"
 
     # Read data.
     map_df = gpd.read_file(map_path)
@@ -34,6 +35,10 @@ if __name__ == "__main__":
     city_box = ["population", "white_ratio", "black_ratio", "asian_ratio", "nati_hawaii_ratio", "amer_indian_ratio", "more_ratio", "hispanic_ratio",
                 "income", "house_value", "education", "family_ratio",
                 "bus_stop", "parking_meter", "parking_off_street", "time_to_work",
+                "by_car_ratio", "by_pub_ratio", "by_taxi_ratio", "by_moto_ratio", "by_bike_ratio", "on_feet_ratio", "at_home_ratio"]
+    city_box = ["population", "white_ratio", "black_ratio", "asian_ratio", "nati_hawaii_ratio", "amer_indian_ratio", "more_ratio", "hispanic_ratio",
+                "income", "house_value", "education", "family_ratio",
+                "bus_stop", "parking_meter", "time_to_work",
                 "by_car_ratio", "by_pub_ratio", "by_taxi_ratio", "by_moto_ratio", "by_bike_ratio", "on_feet_ratio", "at_home_ratio"]
     vfh_box = ["uber_pri", "uber_sup", "uber_dem", "uber_sur", "lyft_pri", "lyft_sup", "lyft_dem", "lyft_sur", "taxi_pri", "taxi_sup", "taxi_dem", "taxi_sur"]
     """
@@ -83,8 +88,8 @@ if __name__ == "__main__":
         x = sm.add_constant(x, prepend = False)
         # OLS
         reg = sm.OLS(y, x).fit()
-        print reg.model.exog
-        print np.linalg.cond(reg.model.exog)
+        #print reg.model.exog
+        #print np.linalg.cond(reg.model.exog)
         coef = reg.params[:]
         p = reg.pvalues[:]
         r = reg.rsquared

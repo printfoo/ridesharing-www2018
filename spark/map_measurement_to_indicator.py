@@ -11,10 +11,10 @@ if __name__ == "__main__":
         city = sys.argv[1].lower()
         goal = sys.argv[2].lower()
     except IndexError:
-        print "Error in city name (SF/NYC) or goal (5min/10min)."
+        print "Error in city name (SF/NYC) or goal (x min)."
         sys.exit()
-    if goal not in {"5min", "10min"} or city not in {"sf", "nyc"}:
-        print "Error in city name (SF/NYC) or goal (5min/10min)."
+    if "min" not in goal or city not in {"sf", "nyc"}:
+        print "Error in city name (SF/NYC) or goal (x min)."
         sys.exit()
 
     # Get paths then delete old results and create new path.
@@ -40,8 +40,14 @@ if __name__ == "__main__":
     # Set time interval and the name of roundoff time column.
     if goal == "5min":
         time_interval = 300
-    if goal == "10min":
-        time_interval = 600
+    if goal == "15min":
+        time_interval = 900
+    if goal == "30min":
+        time_interval = 1800
+    if goal == "60min":
+        time_interval = 3600
+    if goal == "90min":
+        time_interval = 5400
     old_col_name = "(timestamp - (timestamp % " + str(time_interval) + "))"
 
     # If get minute indicator.

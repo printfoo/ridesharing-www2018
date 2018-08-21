@@ -101,7 +101,6 @@ if __name__ == "__main__":
     race_df["amer_indian"] = race_df["Estimate; Total: - American Indian and Alaska Native alone"].astype("float")
     race_df["other"] = race_df["Estimate; Total: - Some other race alone"].astype("float")
     race_df["more"] = race_df["Estimate; Total: - Two or more races:"].astype("float")
-    print race_df.columns
     for fea in ["white", "black", "asian", "nati_hawaii", "amer_indian", "other", "more"]:
         race_df[fea + "_ratio"] = race_df[fea] / race_df["population"]
     
@@ -128,14 +127,15 @@ if __name__ == "__main__":
     
     means_work_df = pd.read_csv(means_work_path)
     means_work_df["total_to_work"] = means_work_df["Estimate; Total:"].astype("float")
-    means_work_df["by_car"] = means_work_df["Estimate; Car, truck, or van:"].astype("float")
+    means_work_df["by_car"] = means_work_df["Estimate; Car, truck, or van: - Drove alone"].astype("float")
+    means_work_df["by_carpool"] = means_work_df["Estimate; Car, truck, or van: - Carpooled:"].astype("float")
     means_work_df["by_pub"] = means_work_df["Estimate; Public transportation (excluding taxicab):"].astype("float")
     means_work_df["by_taxi"] = means_work_df["Estimate; Taxicab"].astype("float")
     means_work_df["by_moto"] = means_work_df["Estimate; Motorcycle"].astype("float")
     means_work_df["by_bike"] = means_work_df["Estimate; Bicycle"].astype("float")
     means_work_df["on_feet"] = means_work_df["Estimate; Walked"].astype("float")
     means_work_df["at_home"] = means_work_df["Estimate; Worked at home"].astype("float")
-    for fea in ["by_car", "by_pub", "by_taxi", "by_moto", "by_bike", "on_feet", "at_home"]:
+    for fea in ["by_car", "by_carpool", "by_pub", "by_taxi", "by_moto", "by_bike", "on_feet", "at_home"]:
         means_work_df[fea + "_ratio"] = means_work_df[fea] / means_work_df["total_to_work"]
     
     education_df = pd.read_csv(education_path)
@@ -143,9 +143,15 @@ if __name__ == "__main__":
     
     open_df = pd.read_csv(open_path)
     open_df["Id2"] = open_df["geoid"]
-    open_df["bus_stop"] = open_df["stop_id"]
-    open_df["parking_meter"] = open_df["POST_ID"]
-    open_df["parking_off_street"] = open_df["Address"]
+    if city.lower() == "sf":
+        open_df["bus_stop"] = open_df["stop_id"]
+        open_df["parking_meter"] = open_df["POST_ID"]
+        open_df["parking_off_street"] = open_df["Address"]
+    else:
+        del open_df["geometry"]
+        open_df["bus_stop"] = open_df["stop_id_x"].fillna(0) + open_df["stop_id_y"].fillna(0)
+        open_df["parking_meter"] = open_df["sel"].fillna(0)
+        open_df["parking_off_street"] = open_df["DCA License Number"].fillna(0)
 
     # Join data.
     gdf = bg_gdf.merge(race_df, on = "Id2", how = "left") \
@@ -161,9 +167,11 @@ if __name__ == "__main__":
 
     # Save data.
     check_box = ["geo_id", "geometry", "population", "income", "house_value", "education", "bus_stop", "parking_meter", "parking_off_street",
+        "white", "black", "asian", "nati_hawaii", "amer_indian", "other", "more",
         "white_ratio", "black_ratio", "asian_ratio", "nati_hawaii_ratio", "amer_indian_ratio", "other_ratio", "more_ratio",
-        "hispanic_ratio", "family_ratio", "nonfamily_ratio", "time_to_work",
-        "by_car_ratio", "by_pub_ratio", "by_taxi_ratio", "by_moto_ratio", "by_bike_ratio", "on_feet_ratio", "at_home_ratio"]
+        "hispanic_ratio", "family_ratio", "family", "time_to_work",
+        "by_car_ratio", "by_carpool_ratio", "by_pub_ratio", "by_taxi_ratio", "by_moto_ratio", "by_bike_ratio", "on_feet_ratio", "at_home_ratio",
+        "by_car", "by_carpool", "by_pub", "by_taxi", "by_moto", "by_bike", "on_feet", "at_home"]
     gdf = gdf[check_box]
     gdf_js = gdf.to_json()
     with open(data_path, "w") as data_file:

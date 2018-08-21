@@ -34,6 +34,9 @@ if __name__ == "__main__":
 
     # Load map trajectory dataframes.
     map_df = spark.read.json(map_trajectory_path).persist(StorageLevel.DISK_ONLY)
+    if city == "nyc":
+        map_df = map_df.filter(map_df["timestamp"].cast("int") >= 1485925200)
+        map_df = map_df.filter(map_df["timestamp"].cast("int") <= 1485925200 + 86400 * 6)
     map_df = map_df.select(map_df["timestamp"].cast("int"), map_df["car_id"], map_df["car_type"])
     max_df = map_df.groupby(["car_id", "car_type"]).max("timestamp")
     min_df = map_df.groupby(["car_id", "car_type"]).min("timestamp")

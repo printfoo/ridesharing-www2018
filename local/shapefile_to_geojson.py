@@ -7,11 +7,12 @@ if __name__ == "__main__":
     sys_path = sys.path[0]
     sep = sys_path.find("/src")
     file_path = sys_path[0:sep]
-    year = sys.argv[1]
-    city = sys.argv[2].lower()
+    year = "2015"
+    city = sys.argv[1].lower()
     key_dict = {"2010": "COUNTYFP10", "2015": "COUNTYFP"}
     city_dict = {"sf": ["06", ["075"]],
-        "nyc": ["36", ["005", "047", "061", "081", "085"]]}
+        "nyc": ["36", ["005", "047", "061", "081", "085"]],
+        "bos": ["25"]}
     # city_dict[city][0] is state FIPS, city_dict[city][1] is county FIPS.
     # SF has 1 county, NYC has 5 counties.
 
@@ -24,8 +25,13 @@ if __name__ == "__main__":
     city_gdf = state_gdf[state_gdf["GEOID"] == "fool"] # Empty
     for county_index in city_dict[city][1]:
         city_gdf = city_gdf.append(state_gdf[state_gdf[key_dict[year]] == county_index])
-    city_gdf = city_gdf[city_gdf["INTPTLON"].astype("float") < -73.83] #-73.844
-    city_gdf = city_gdf[1.13202 * city_gdf["INTPTLON"].astype("float") - city_gdf["INTPTLAT"].astype("float") + 124.38 < 0] #124.41461
+    """
+    city_gdf = city_gdf[city_gdf["INTPTLON"].astype("float") < -73.83]
+    city_gdf = city_gdf[1.13202 * city_gdf["INTPTLON"].astype("float") - city_gdf["INTPTLAT"].astype("float") + 124.38 < 0]
+    """
+    city_gdf = city_gdf[city_gdf["INTPTLON"].astype("float") < -73.885]
+    city_gdf = city_gdf[1.13202 * city_gdf["INTPTLON"].astype("float") - city_gdf["INTPTLAT"].astype("float") + 124.41 < 0]
+    city_gdf = city_gdf[-0.38574 * city_gdf["INTPTLON"].astype("float") - city_gdf["INTPTLAT"].astype("float") + 12.384 > 0]
     city_gjs = city_gdf.to_json()
 
     # Write geojson.
