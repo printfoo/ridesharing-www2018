@@ -1,0 +1,43 @@
+CURRENT ISSUES
+==============
+
+1. Cannot log into the mobile site, even with gmail and register through a
+phone.
+	TODO: try to change the agent.
+
+2. The credit card is deemed as invalid when try to makde a reservation.
+However, the accounts are still alive, so we can still query surge pricing.
+
+Current Findings
+================
+1. Each Uber user (including drivers and clients) has a unique classifier,
+uuid.
+2. Each Uber car type has a vehicleView, which provides information for the
+current surge pricing.
+3. In nearbyVehicles, Uber provides a list of cars of certain type nearby
+the current location, with eta and a path vector(?). If there is no
+certain car nearby, a sorryMsg will be provided.
+4. A PingClient POST message is sent by the app on a ~ 5 sec interval.
+5. Surge prcing is independently applied to different types of cars. For
+example, I observed an instance that there is a price surge in UberX but
+not in uberXL and uberSUV, because of the minfare and perDistanceUnit are
+different(?). Uber blacks are more expensive than other types of cars.
+6. Different types of cars cover different areas. For example, I set the
+pickup location in a rural area, where no uberX and uberTaxi are available,
+but uber black cars were willing to pick me up in 20 mins.
+7. Uber provides some APIs. One of our interest is price estimate API, which
+provides a property surge_multiplier to show the current price surge.
+However, no car info are available. A dev ID is required to call the API
+and the rate-limit is 1000 per hour per dev ID.
+8. Uber uses google maps, mobileapptracking.com, crashlytics.com...
+9. SessionLength message is posted when the iphone goes back to sleep. A
+sessionlength value (in seconds) must be provided.
+10. Change sessionhash for every session.
+
+Uber Car Code and Group
+=======================
+116 - uberX - uberX
+17 - black car(uber black) - black car(uber black)
+565 - uberXL -uberX
+59 - uberTaxi - uberTaxi
+71 - uberSUV - uber black

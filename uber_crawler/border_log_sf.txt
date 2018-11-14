@@ -1,0 +1,103 @@
+mapping/0/6-8.txt: (0, 'connection closed unexpectedly')
+mapping/0/7-2.txt: (0, 'connection closed unexpectedly')
+mapping/0/11-12.txt: (0, 'connection closed unexpectedly')
+mapping/0/10-13.txt: (0, 'connection closed unexpectedly')
+mapping/0/10-5.txt: (0, 'connection closed unexpectedly')
+mapping/0/10-18.txt: (0, 'connection closed unexpectedly')
+mapping/0/9-15.txt: (0, 'connection closed unexpectedly')
+mapping/0/6-15.txt: (0, 'connection closed unexpectedly')
+mapping/0/5-10.txt: (0, 'connection closed unexpectedly')
+mapping/0/9-13.txt: (0, 'connection closed unexpectedly')
+mapping/0/10-18.txt: (0, 'connection closed unexpectedly')
+mapping/0/4-13.txt: (0, 'connection closed unexpectedly')
+mapping/0/5-15.txt: (0, 'connection closed unexpectedly')
+mapping/0/8-8.txt: (0, 'connection closed unexpectedly')
+mapping/0/0-7.txt: (0, 'connection closed unexpectedly')
+mapping/0/3-10.txt: (0, 'connection closed unexpectedly')
+mapping/0/13-9.txt: (0, 'connection closed unexpectedly')
+mapping/0/8-12.txt: (0, 'connection closed unexpectedly')
+mapping/0/11-1.txt: (0, 'connection closed unexpectedly')
+mapping/0/7-6.txt: (0, 'connection closed unexpectedly')
+mapping/0/4-2.txt: (0, 'connection closed unexpectedly')
+mapping/0/8-4.txt: (0, 'connection closed unexpectedly')
+mapping/0/4-4.txt: (0, 'connection closed unexpectedly')
+mapping/0/12-15.txt: (0, 'connection closed unexpectedly')
+mapping/0/3-9.txt: (0, 'connection closed unexpectedly')
+mapping/0/5-5.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.472243123&end_longitude=-122.472243123&start_latitude=37.7656432023&end_latitude=37.7656432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/1-4.txt: (0, 'connection closed unexpectedly')
+mapping/0/13-10.txt: (0, 'connection closed unexpectedly')
+mapping/0/9-3.txt: (0, 'connection closed unexpectedly')
+mapping/0/2-5.txt: (0, 'connection closed unexpectedly')
+mapping/0/1-11.txt: (0, 'connection closed unexpectedly')
+mapping/0/4-8.txt: (0, 'connection closed unexpectedly')
+mapping/0/11-16.txt: (0, 'connection closed unexpectedly')
+mapping/0/1-11.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.425443123&end_longitude=-122.425443123&start_latitude=37.7968432023&end_latitude=37.7968432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/4-8.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.448843123&end_longitude=-122.448843123&start_latitude=37.7734432023&end_latitude=37.7734432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/7-1.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.503443123&end_longitude=-122.503443123&start_latitude=37.7500432023&end_latitude=37.7500432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/9-9.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.441043123&end_longitude=-122.441043123&start_latitude=37.7344432023&end_latitude=37.7344432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/11-16.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.386443123&end_longitude=-122.386443123&start_latitude=37.7188432023&end_latitude=37.7188432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/0-10.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.433243123&end_longitude=-122.433243123&start_latitude=37.8046432023&end_latitude=37.8046432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/3-13.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.409843123&end_longitude=-122.409843123&start_latitude=37.7812432023&end_latitude=37.7812432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/6-5.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.472243123&end_longitude=-122.472243123&start_latitude=37.7578432023&end_latitude=37.7578432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/8-15.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.394243123&end_longitude=-122.394243123&start_latitude=37.7422432023&end_latitude=37.7422432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/11-4.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.480043123&end_longitude=-122.480043123&start_latitude=37.7188432023&end_latitude=37.7188432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/13-12.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.417643123&end_longitude=-122.417643123&start_latitude=37.7032432023&end_latitude=37.7032432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/0-10.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.433243123&end_longitude=-122.433243123&start_latitude=37.8046432023&end_latitude=37.8046432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/3-13.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.409843123&end_longitude=-122.409843123&start_latitude=37.7812432023&end_latitude=37.7812432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/6-5.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.472243123&end_longitude=-122.472243123&start_latitude=37.7578432023&end_latitude=37.7578432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/8-15.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.394243123&end_longitude=-122.394243123&start_latitude=37.7422432023&end_latitude=37.7422432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/11-4.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.480043123&end_longitude=-122.480043123&start_latitude=37.7188432023&end_latitude=37.7188432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/13-12.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.417643123&end_longitude=-122.417643123&start_latitude=37.7032432023&end_latitude=37.7032432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/0-10.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.433243123&end_longitude=-122.433243123&start_latitude=37.8046432023&end_latitude=37.8046432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/3-13.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.409843123&end_longitude=-122.409843123&start_latitude=37.7812432023&end_latitude=37.7812432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/6-5.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.472243123&end_longitude=-122.472243123&start_latitude=37.7578432023&end_latitude=37.7578432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/8-15.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.394243123&end_longitude=-122.394243123&start_latitude=37.7422432023&end_latitude=37.7422432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/11-4.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.480043123&end_longitude=-122.480043123&start_latitude=37.7188432023&end_latitude=37.7188432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/13-12.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.417643123&end_longitude=-122.417643123&start_latitude=37.7032432023&end_latitude=37.7032432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/13-1.txt: (0, 'connection closed unexpectedly')
+mapping/0/10-9.txt: (0, 'connection closed unexpectedly')
+mapping/0/2-6.txt: (0, 'connection closed unexpectedly')
+mapping/0/2-9.txt: (0, 'connection closed unexpectedly')
+mapping/0/6-9.txt: (0, 'connection closed unexpectedly')
+mapping/0/12-1.txt: (0, 'connection closed unexpectedly')
+mapping/0/5-1.txt: (0, 'connection closed unexpectedly')
+mapping/0/7-1.txt: (0, 'connection closed unexpectedly')
+mapping/0/1-12.txt: (0, 'connection closed unexpectedly')
+mapping/0/0-4.txt: (0, 'connection closed unexpectedly')
+mapping/0/4-1.txt: (0, 'connection closed unexpectedly')
+mapping/0/12-7.txt: (0, 'connection closed unexpectedly')
+mapping/0/1-6.txt: (0, 'connection closed unexpectedly')
+mapping/0/2-16.txt: (0, 'connection closed unexpectedly')
+mapping/0/1-9.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.441043123&end_longitude=-122.441043123&start_latitude=37.7968432023&end_latitude=37.7968432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/2-9.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.441043123&end_longitude=-122.441043123&start_latitude=37.7890432023&end_latitude=37.7890432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/2-11.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.425443123&end_longitude=-122.425443123&start_latitude=37.7890432023&end_latitude=37.7890432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/1-14.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.402043123&end_longitude=-122.402043123&start_latitude=37.7968432023&end_latitude=37.7968432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/2-7.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.456643123&end_longitude=-122.456643123&start_latitude=37.7890432023&end_latitude=37.7890432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/4-6.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.464443123&end_longitude=-122.464443123&start_latitude=37.7734432023&end_latitude=37.7734432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/4-11.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.425443123&end_longitude=-122.425443123&start_latitude=37.7734432023&end_latitude=37.7734432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/5-1.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.503443123&end_longitude=-122.503443123&start_latitude=37.7656432023&end_latitude=37.7656432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/7-11.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.425443123&end_longitude=-122.425443123&start_latitude=37.7500432023&end_latitude=37.7500432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/4-16.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.386443123&end_longitude=-122.386443123&start_latitude=37.7734432023&end_latitude=37.7734432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/7-9.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.441043123&end_longitude=-122.441043123&start_latitude=37.7500432023&end_latitude=37.7500432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/5-3.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.487843123&end_longitude=-122.487843123&start_latitude=37.7656432023&end_latitude=37.7656432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/6-15.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.394243123&end_longitude=-122.394243123&start_latitude=37.7578432023&end_latitude=37.7578432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/7-4.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.480043123&end_longitude=-122.480043123&start_latitude=37.7500432023&end_latitude=37.7500432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/7-13.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.409843123&end_longitude=-122.409843123&start_latitude=37.7500432023&end_latitude=37.7500432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/9-12.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.417643123&end_longitude=-122.417643123&start_latitude=37.7344432023&end_latitude=37.7344432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/9-7.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.456643123&end_longitude=-122.456643123&start_latitude=37.7344432023&end_latitude=37.7344432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/10-2.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.495643123&end_longitude=-122.495643123&start_latitude=37.7266432023&end_latitude=37.7266432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/9-17.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.378643123&end_longitude=-122.378643123&start_latitude=37.7344432023&end_latitude=37.7344432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/10-4.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.480043123&end_longitude=-122.480043123&start_latitude=37.7266432023&end_latitude=37.7266432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/11-14.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.402043123&end_longitude=-122.402043123&start_latitude=37.7188432023&end_latitude=37.7188432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/11-19.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.363043123&end_longitude=-122.363043123&start_latitude=37.7188432023&end_latitude=37.7188432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/12-5.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.472243123&end_longitude=-122.472243123&start_latitude=37.7110432023&end_latitude=37.7110432023&server_token=Moiw3oaen5GacCCDZHnvkerOmrrFs5VySPKKDyeD
+mapping/0/12-7.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.456643123&end_longitude=-122.456643123&start_latitude=37.7110432023&end_latitude=37.7110432023&server_token=qbBhYqCDjkx4Lkt6r1xEWdTFcgbwVxokflSrjxMS
+mapping/0/12-9.txt: HTTPSConnectionPool(host='api.uber.com', port=None): Max retries exceeded with url: https://api.uber.com/v1/estimates/price?start_longitude=-122.441043123&end_longitude=-122.441043123&start_latitude=37.7110432023&end_latitude=37.7110432023&server_token=FwJ7rtuN8wu1xh7kpx5t011kapmM3KzA1k1yO9so
+mapping/0/7-7.txt: (0, 'connection closed unexpectedly')
+mapping/0/0-11.txt: (0, 'connection closed unexpectedly')
+Traceback (most recent call last):
+  File "./collect_border_data_api.py", line 258, in <module>
+    start_collecting(sys.argv[1], sys.argv[2])
+  File "./collect_border_data_api.py", line 74, in start_collecting
+    time.sleep(0.1)
+KeyboardInterrupt
